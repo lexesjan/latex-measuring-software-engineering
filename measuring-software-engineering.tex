@@ -3,6 +3,7 @@
 \usepackage{xurl}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{listings}
 
 \title{\includegraphics[width=\textwidth]{images/cover.jpg}\\Measuring Software Engineering}
 \author{Lexes Jan Mantiquilla}
@@ -40,10 +41,107 @@ improve the speed at which software development takes place.
 
 It is clear that measuring software engineering has many benefits. Thus, many
 companies strive to create and or use services which perform such measurement.
-However, there are some ethical concerns and incorrect methods of measuring
+However, there are some ethical concerns and inefficient methods of measuring
 software engineering which will be explored further in the next section.
 
 \section{How software engineering can be measured}
+There are many individual metrics which can be measured during the development
+of software which may indicate progress. The main metrics that this report will
+go through are lines of code, number of pull requests and code review
+turnaround time.
+
+\subsection{Lines of code}
+The most simplest metric to measure would be the lines of code (LOC). LOC is a
+simple and crude method to measure the productivity of a software engineer.
+Using LOC rewards bad coding practices and less efficient
+code.~\cite{fenton1999software} This is evident in the short Java code example
+below.
+
+\subsubsection{Version 1}
+\begin{lstlisting}[language=Java,frame=single,firstnumber=0,numbers=left,label={lst:v1}]
+for (int i = 0; i < 5; i++) {
+  System.out.println("Hello world");
+}
+\end{lstlisting}
+
+\subsubsection{Version 2}
+\begin{lstlisting}[language=Java,frame=single,firstnumber=0,numbers=left,label={lst:v2}]
+System.out.println("Hello world");
+System.out.println("Hello world");
+System.out.println("Hello world");
+System.out.println("Hello world");
+System.out.println("Hello world");
+\end{lstlisting}
+
+The versions~\ref{lst:v1} and~\ref{lst:v2} of the code produce the same output.
+However it is clear which version of the code is more desirable. The
+version~\ref{lst:v1} of the code is follows good coding practices. It is DRY
+(don't repeat yourself). The version~\ref{lst:v2} on the other hand is bad
+quality code compared to the first version.
+
+Other reasons why using LOC as a metric to measure productivity is not a good
+idea is that it does not take into account formatting. It is also not language
+agnostic. This is seen in the examples below.
+
+\subsubsection{Version 1}
+\begin{lstlisting}[language=Java,frame=single,firstnumber=0,numbers=left,label={lst:fmtv1}]
+if (i < 2) {
+  i++;
+} else if (i > 10) {
+  i--;
+}
+\end{lstlisting}
+
+\subsubsection{Version 2}
+\begin{lstlisting}[language=Java,frame=single,firstnumber=0,numbers=left,label={lst:fmtv2}]
+if (i < 2) { i++; } else if (i > 10) { i--; }
+\end{lstlisting}
+
+\subsubsection{Version 3}
+\begin{lstlisting}[language={[x86masm]Assembler},frame=single,firstnumber=0,numbers=left,label={lst:fmtv3}]
+  cmp rcx, #2
+  jge ifIge2
+  inc rcx
+  jmp eIf
+ifIge2:
+  cmp rcx, #10
+  jle eIf
+  dec rcx
+eIf
+\end{lstlisting}
+
+Yet again all three versions of the code is equivalent however it is not clear
+from the LOC which software engineer is more productive.
+
+\subsection{Number of pull requests}
+The general idea is that the more pull requests completed, the more productive
+a team is. This method however does not measure productivity well. Like
+counting lines of code, using the number of pull requests created also favors
+bad programming practices. It encourages small and unnecessary pull requests.
+The size and the difficulty of the pull request is also not taken into account.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/number_of_pr.png}
+  \caption{Example number of pull requests metric, courtesy of
+  Medium~\cite{metrics2020wrong}}
+\end{figure}
+
+\subsection{Code review turnaround time}
+A more modern approach to measuring software engineer productivity would be to
+measure process metrics instead of product metrics. Some examples of product
+metrics would be the lines of code or the number of commits / pull requests
+completed.
+
+The code review turnaround time is an example of process metrics. Whenever code
+is added or changed in a codebase, it must undergo a code review process. This
+usually involves other coworkers looking over code and making suggestions
+before the code can be merged into the main branch. The general idea is to
+measure how long it takes until a code review is done.
+
+According to Abi Noda measuring process metrics is a great way to increase
+productivity. Process metrics directly impact the developer experience in a
+positive way. Not only that, but it is also a great way to show how the
+organization is improving.~\cite{elusive2019quest}
 
 \section{Platforms available}
 Measuring the software engineering process is a valuable process. Thus, many
