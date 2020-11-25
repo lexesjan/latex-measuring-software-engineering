@@ -1,6 +1,7 @@
 \documentclass{article}
 
-\usepackage{url}
+\usepackage{xurl}
+\usepackage{hyperref}
 
 \title{Measuring Software Engineering}
 \author{Lexes Jan Mantiquilla}
@@ -19,13 +20,53 @@ available to perform measurement. As well as, that I will go through the
 algorithmic approaches and the ethic concerns surrounding the measurement of
 the software engineering process.
 
-\section{How Software Engineering can be measured}
+\section{How software engineering can be measured}
+
 \section{Platforms available}
+Measuring the software engineering process is a valuable process. Thus, many
+services have been created to aid companies analyse and display this process.
+The data provided by the services help employers visualize whether or not the
+ongoing projects will be delivered on time, see which employees have a high
+impact on the company, etc.
+
 \subsection{Pluralsight Flow}
+Pluralsight Flow, called GitPrime previously, is a service which obtains data
+from git host, e.g. GitHub, and the git information from repositories which the
+engineers work on.~\cite{plural2019sight} The said data is processed to produce
+useful metrics to indicate the performance of software engineers.
+
+Version Control Systems like git generate a large digital footprint for the
+developers that use it. Information like the number of commits done by a
+developer, the lines of code changed by a developer, is produced through the
+use of a version control system. These metrics alone may not be a good
+indication of the productivity of a software engineer. However, when processed
+together, a clearer picture is obtained.
+
+Pluralsight Flow, for example, will use the information found pull requests
+(PRs), tickets linked to said PRs and commits to produce useful graphs and
+metrics.
+
+\subsubsection*{Some examples new metrics created by Pluralsight Flow are:}
+\begin{itemize}
+  \item Churn --- The amount of code which is changed or deleted shortly after
+    it was written. A high amount of churn may indicate that something may be
+    affecting the development lifecycle.
+  \item Efficiency --- A percentage evaluating whether the committed code is
+    productive work. This metric is directly related to the churn metric.
+  \item Impact --- A score given to a commit which measures the effect of
+    changing or adding specific lines of code. This metric uses many factors to
+    determine the score such as the amount of code changed, the number of files
+    affected, the percentage of old code edited and many more.
+\end{itemize}
+~\cite{plural2019sight2}
 
 \section{Algorithmic approaches}
+
 \section{Ethics}
+
 \section{Conclusion}
+
+\newpage
 
 \bibliographystyle{plain}
 \bibliography{bibliography.bib}
