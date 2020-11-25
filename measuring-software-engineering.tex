@@ -2,6 +2,7 @@
 
 \usepackage{xurl}
 \usepackage{hyperref}
+\usepackage{graphicx}
 
 \title{Measuring Software Engineering}
 \author{Lexes Jan Mantiquilla}
@@ -10,21 +11,23 @@
 \begin{document}
 
 \maketitle
+\newpage
+
 \tableofcontents
 \newpage
 
 \section{Introduction}
-In this report I will explain the various ways in which one can measure the
-software engineering process. I will outline what platforms or frameworks are
-available to perform measurement. As well as, that I will go through the
-algorithmic approaches and the ethic concerns surrounding the measurement of
-the software engineering process.
+This report will focus on explaining the various ways in which one can measure
+the software engineering process. The report outline what platforms or
+frameworks are available to perform measurement. As well as that, the report
+will go through the algorithmic approaches and the ethic concerns surrounding
+the measurement of the software engineering process.
 
 \section{How software engineering can be measured}
 
 \section{Platforms available}
 Measuring the software engineering process is a valuable process. Thus, many
-services have been created to aid companies analyse and display this process.
+services have been created to aid companies analyze and display this process.
 The data provided by the services help employers visualize whether or not the
 ongoing projects will be delivered on time, see which employees have a high
 impact on the company, etc.
@@ -46,11 +49,11 @@ Pluralsight Flow, for example, will use the information found pull requests
 (PRs), tickets linked to said PRs and commits to produce useful graphs and
 metrics.
 
-\subsubsection*{Some examples new metrics created by Pluralsight Flow are:}
+\subsubsection{New metrics extrapolated by Pluralsight Flow:}
 \begin{itemize}
   \item Churn --- The amount of code which is changed or deleted shortly after
     it was written. A high amount of churn may indicate that something may be
-    affecting the development lifecycle.
+    affecting the development life cycle.
   \item Efficiency --- A percentage evaluating whether the committed code is
     productive work. This metric is directly related to the churn metric.
   \item Impact --- A score given to a commit which measures the effect of
@@ -59,6 +62,46 @@ metrics.
     affected, the percentage of old code edited and many more.
 \end{itemize}
 ~\cite{plural2019sight2}
+
+\subsection{Azure DevOps services}
+Azure DevOps services is a collection of developer services provided by
+Microsoft to facilitate the software engineering process. There are many Azure
+DevOps services available however this report focus on the Azure Boards and the
+Azure Pipelines service in particular.~\cite{azure2020devops}
+
+\subsubsection{Azure Boards}
+Azure Boards is a service which allows software engineers to track and manage
+their work for software projects. Azure Boards is built with software
+engineering processes in mind and has native support for Kanban and Scrum. It
+offers built-in scrum boards and and tools to help the team run sprints and
+stand-ups.
+
+The basis of Azure Boards is an entity called the `work item'. This entity
+tracks all the work done for the software project. A `work item' communicates
+the details of the work to be completed to the team. Each `work item' has a
+status attached which is an indication the progress of the work. This allows
+the whole team to be on the same page with regards to what work is assigned to
+who and whether or not it has been completed.
+
+Each `work item' has a rich set of information attached to it. It contains
+information such as links to discussions regarding the `work item', any
+commits, PRs or tickets related, as well as a history of all changes to the
+`work item'.
+
+The information collected through the use of Azure Boards is analyzed and
+presented on a dashboard which indicates the health of the project. The
+dashboard contains all the metrics gathered, such as the velocity of the
+project or average completion time, in one place.~\cite{azure2020boards}
+
+\subsubsection{Azure Pipelines}
+Azure Pipelines is a cloud continuous integration (CI) and continuous delivery
+(CD) service. That is, a service which builds, tests and deploys your code
+automatically. This service is used in conjunction with a git host such as
+GitHub or Azure Repos.
+
+The metrics which Azure Pipelines provides are the pipeline pass rate, the code
+test pass rate and the average pipeline duration. The information for the
+pipeline analytics is obtained from the pipeline runs.
 
 \section{Algorithmic approaches}
 
