@@ -135,7 +135,7 @@ metrics would be the lines of code or the number of commits / pull requests
 completed.
 
 The code review turnaround time is an example of process metrics. Whenever code
-is added or changed in a codebase, it must undergo a code review process. This
+is added or changed in a code base, it must undergo a code review process. This
 usually involves other coworkers looking over code and making suggestions
 before the code can be merged into the main branch. The general idea is to
 measure how long it takes until a code review is done.
@@ -224,6 +224,63 @@ test pass rate and the average pipeline duration. The information for the
 pipeline analytics is obtained from the pipeline runs.
 
 \section{Algorithmic approaches}
+
+\subsection{COCOMO}
+COCOMO (Constructive Cost Model) is a regression model which is used to
+estimate the cost, effort and the development time to produce a software
+project. This model was produced by Barry W. Boehm~\cite{barry1981software}.
+
+Software projects which use the COCOMO model are classified into three
+categories which are organic, semi-detached and embedded. The definition of
+each is found in figure~\ref{fig:catagories} below.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/cocomo_categories.png}
+  \caption{\raggedright{}Definition of the different COCOMO categories,
+  courtesy of Medium~\cite{cocomo2020procedural}}\label{fig:catagories}
+\end{figure}
+
+The different categories influence the algorithms used during the calculation
+of the estimates.
+
+The COCOMO model has three different types which allow the software manager to
+specify the granularity of the estimates.
+
+\subsubsection*{The different types are:}
+\begin{itemize}
+  \item Basic COCOMO model --- This model is quite limited and restricted as it
+    uses kilo lines of code for the calculations. This model does not take into
+    account the other factors for the estimations.
+  \item Intermediate COCOMO model --- This model builds on top of the basic
+    COCOMO model and takes cost drivers into account which further enhances the
+    estimate. A cost driver is a term used to define factors which have an
+    effect on the effort, cost and time during the development phase of a
+    software project.
+  \item Detailed COCOMO model --- Yet again this model builds on top of the
+    basic and intermediate model and incorporates the Waterfall model e.g.\ the
+    the cost estimates are completed at every step of the waterfall model. This
+    is the most accurate model available in the COCOMO models.
+\end{itemize}
+
+\subsection{Machine learning}
+``Machine learning is the study of computer algorithms that allow computer
+programs to automatically improve through
+experience.~\cite{machine1997learning}'' Nowadays machine learning is used
+extensively. They power things from self-driving cars to spam filtering. The
+applications of machine learning are endless.
+
+In order to use machine learning, one must have a large data set to work with.
+One of the side effects of using a version control system is that it produces a
+large data set regarding software engineering. One application of machine
+learning is to process the data from version control systems to measure
+software development productivity.
+
+Firstly, we must define what it means to be a productive software engineer. A
+highly productive software engineer is one which produces more source code and
+source code of a higher quality. Through the use of machine learning
+techniques, the complex code structure produced by software engineers is
+reduced into quantitative measures of quality and
+quantity.~\cite{helie2018measuring}
 
 \section{Ethics}
 
