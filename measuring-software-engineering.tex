@@ -17,10 +17,10 @@
 
 \section{Introduction}
 This report will focus on explaining the various ways in which one can measure
-the software engineering process. The report outline what platforms or
-frameworks are available to perform measurement. As well as that, the report
-will go through the algorithmic approaches and the ethic concerns surrounding
-the measurement of the software engineering process.
+the software engineering process. It outlines what platforms or frameworks are
+available to perform measurement. As well as that, the report will go through
+the algorithmic approaches and the ethical concerns surrounding the measurement
+of the software engineering process.
 
 \section{Why measure software engineering}
 There are many benefits to measuring software engineering. Most notably to
@@ -29,7 +29,7 @@ improve the speed at which software development takes place.
 \subsection{More specifically, measuring software engineering:}
 \begin{itemize}
   \item Helps in identifying possible software defects early in development
-  \item Increase the work load that the current staff can accomplish
+  \item Increase the workload that the current staff can accomplish
   \item Identify high-output employees to receive rewards and low-output
     employees to receive help and training.
   \item Increase the complexity and value of the software with the same staff
@@ -38,9 +38,10 @@ improve the speed at which software development takes place.
 ~\cite{scacchi1995understanding}
 
 It is clear that measuring software engineering has many benefits. Thus, many
-companies strive to create and or use services which perform such measurement.
-However, there are some ethical concerns and inefficient methods of measuring
-software engineering which will be explored further in the next section.
+companies strive to create and/or use services which perform such measurement.
+However, there are also some ethical concerns and inefficient methods of
+measuring software engineering. These will be explored further in the next
+section.
 
 \section{How software engineering can be measured}
 There are many individual metrics which can be measured during the development
@@ -51,7 +52,7 @@ will go through are lines of code, number of pull requests and code review
 turnaround time.
 
 \subsection{Lines of code}
-The most simplest metric to measure would be the lines of code (LOC). LOC is a
+The simplest metric to measure would be the lines of code (LOC). LOC is a
 simple and crude method to measure the productivity of a software engineer.
 Using LOC rewards bad coding practices and less efficient
 code.~\cite{fenton1999software} This is evident in the short Java code example
@@ -75,13 +76,13 @@ System.out.println("Hello world");
 
 The versions~\ref{lst:v1} and~\ref{lst:v2} of the code produce the same output.
 However it is clear which version of the code is more desirable. The
-version~\ref{lst:v1} of the code is follows good coding practices. It is DRY
-(don't repeat yourself). The version~\ref{lst:v2} on the other hand is bad
+version~\ref{lst:v1} of the code follows good coding practices. It is DRY
+(don't repeat yourself). The version~\ref{lst:v2} on the other hand is a bad
 quality code compared to the first version.
 
 Other reasons why using LOC as a metric to measure productivity is not a good
-idea is that it does not take into account formatting. It is also not language
-agnostic. This is seen in the examples below.
+idea is that it does not take formatting into account. It is also not language
+agnostic. This is seen in the examples below;
 
 \subsubsection{Version 1}
 \begin{lstlisting}[language=Java,frame=single,firstnumber=0,numbers=left,label={lst:fmtv1}]
@@ -140,20 +141,20 @@ measure how long it takes until a code review is done.
 
 According to Abi Noda measuring process metrics is a great way to increase
 productivity. Process metrics directly impact the developer experience in a
-positive way. Not only that, but it is also a great way to show how the
-organization is improving.~\cite{elusive2019quest}
+positive way. It is also a great way to show how the organization is
+improving.~\cite{elusive2019quest}
 
 \section{Platforms available}
 Measuring the software engineering process is a valuable process. Thus, many
-services have been created to aid companies analyze and display this process.
-The data provided by the services help employers visualize whether or not the
-ongoing projects will be delivered on time, see which employees have a high
-impact on the company, etc.
+services have been created to aid companies in analyzing and displaying this
+process.  The data provided by the services help employers visualize whether or
+not the ongoing projects will be delivered on time, see which employees have a
+high impact on the company, etc.
 
 \subsection{Pluralsight Flow}
 Pluralsight Flow, called GitPrime previously, is a service which obtains data
 from git host, e.g. GitHub, and the git information from repositories which the
-engineers work on.~\cite{plural2019sight} The said data is processed to produce
+engineers work on.~\cite{plural2019sight} The data is processed to produce
 useful metrics to indicate the performance of software engineers.
 
 Version Control Systems like git generate a large digital footprint for the
@@ -163,9 +164,9 @@ use of a version control system. These metrics alone may not be a good
 indication of the productivity of a software engineer. However, when processed
 together, a clearer picture is obtained.
 
-Pluralsight Flow, for example, will use the information found pull requests
-(PRs), tickets linked to said PRs and commits to produce useful graphs and
-metrics.
+Pluralsight Flow, for example, will use the information found from pull
+requests (PRs), tickets linked to said PRs and commits to produce useful graphs
+and metrics.
 
 \subsubsection{New metrics extrapolated by Pluralsight Flow:}
 \begin{itemize}
@@ -184,8 +185,8 @@ metrics.
 \subsection{Azure DevOps services}
 Azure DevOps services is a collection of developer services provided by
 Microsoft to facilitate the software engineering process. There are many Azure
-DevOps services available however this report focus on the Azure Boards and the
-Azure Pipelines service in particular.~\cite{azure2020devops}
+DevOps services available. This report, however, will focus on the Azure Boards
+and the Azure Pipelines service in particular.~\cite{azure2020devops}
 
 \subsubsection{Azure Boards}
 Azure Boards is a service which allows software engineers to track and manage
@@ -197,7 +198,7 @@ stand-ups.
 The basis of Azure Boards is an entity called the `work item'. This entity
 tracks all the work done for the software project. A `work item' communicates
 the details of the work to be completed to the team. Each `work item' has a
-status attached which is an indication the progress of the work. This allows
+status attached which is an indication of the progress of the work. This allows
 the whole team to be on the same page with regards to what work is assigned to
 who and whether or not it has been completed.
 
@@ -241,7 +242,7 @@ each is found in figure~\ref{fig:catagories} below.
 The different categories influence the algorithms used during the calculation
 of the estimates.
 
-The COCOMO model has three different types which allow the software manager to
+The COCOMO model has three different models which allow the software manager to
 specify the granularity of the estimates.
 
 \subsubsection*{The different types are:}
@@ -256,14 +257,14 @@ specify the granularity of the estimates.
     software project.
   \item Detailed COCOMO model --- Yet again this model builds on top of the
     basic and intermediate model and incorporates the Waterfall model e.g.\ the
-    the cost estimates are completed at every step of the waterfall model. This
-    is the most accurate model available in the COCOMO models.
+    cost estimates are completed at every step of the waterfall model. This is
+    the most accurate model available in the COCOMO models.
 \end{itemize}
 
 \subsection{Machine learning}
 ``Machine learning is the study of computer algorithms that allow computer
 programs to automatically improve through
-experience.~\cite{machine1997learning}'' Nowadays machine learning is used
+experience.''~\cite{machine1997learning} Nowadays machine learning is used
 extensively. They power things from self-driving cars to spam filtering. The
 applications of machine learning are endless.
 
@@ -282,25 +283,36 @@ quantity.~\cite{helie2018measuring}
 
 \section{Ethics}
 Based on the research that was presented in this report, there seems to be
-little to no ethical concerns as the methods used to measure software
-engineering explored are not intrusive in any way. However, negative effects
-can be introduced with improper measurement such as the use of lines of code or
-the number of commits as a metric. The use of improper metrics may encourage
-people to perform against to their normal behaviour.
+little to no ethical concerns as the methods aforementioned above are not
+intrusive in any way. However, negative effects can be introduced with improper
+measurement such as the use of lines of code or the number of commits as a
+metric. The use of improper metrics may encourage people to perform negatively.
 
-Nevertheless there are other methods of sofware engineering measurement which
-that can pose some ethical concerns due to their invasive nature. This is a
-gray area as it can depend on the individual's moral codes or ethics whether
-they feel that it is very intrusive.
+Regardless there are other methods of software engineering measurement which
+can pose some ethical concerns due to their invasive nature. This is a
+generally grey area; the level of invasive nature of the other methods can
+depend on the individual whose performance is being measured. Moreover, there
+are a number of benefits that accompany the other methods that help improve
+software engineering. Therefore, it becomes difficult to completely condemn
+those practices, and remains to be an area of constant discussion among the
+software engineering populace.
 
 \section{Conclusion}
-Measuring software engineering can have many benefits but can raise some
-ethical concerns. There are many ways to measure software engineering, most of
-which is a by-product of using a version control system. Many services and
-platforms have been created to aid companies and organizations analyze the data
-which has been collected such as Pluralsight Flow and Azure DevOps Services.
-Many algorithmic approaches exist to process the data collected to aid the
-software engineering process.
+There are many ways to measure software engineering, most of which is a
+by-product of using a version control system. Many services and platforms have
+been created to aid companies and organizations analyze the data which has been
+collected such as Pluralsight Flow and Azure DevOps Services.  Many algorithmic
+approaches exist to process the data collected to aid the software engineering
+process.
+
+However, it should be of note that while measuring software engineering
+provides a lot of benefits, it also brings about a number of ethical concerns
+among the software engineering group. It is an ever-evolving practice; many
+other methods of measurement will undoubtedly be developed or improved upon.
+Therefore, one should not completely disregard one method of measurement based
+on ethical concerns. Instead, the measurement method should be viewed as a
+whole, advantages and disadvantages alike, in order to aid the greater picture
+of improving software engineering as a practice.
 
 \newpage
 
